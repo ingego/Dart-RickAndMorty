@@ -52,7 +52,7 @@ class LocationManager extends ApiManager {
       params += "name=$name&";
     }
     if (episode != null) {
-      params += "gender=$episode&";
+      params += "episode=$episode&";
     }
 
     List<Location> locations = [];

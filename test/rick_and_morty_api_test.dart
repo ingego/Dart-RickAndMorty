@@ -1,5 +1,6 @@
 import 'package:logger/logger.dart';
 import 'package:rick_and_morty_api/src/manager/character_manager.dart';
+import 'package:rick_and_morty_api/src/manager/location_manager.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -54,6 +55,39 @@ void main() {
       var char =
           await charApi.getFilteredCharacters(name: "rick", gender: "sdes");
       Logger().d(char);
+    });
+  });
+  group("Location", () {
+    late LocationManager locApi;
+    setUp(() {
+      locApi = LocationManager();
+    });
+
+    test("get location(error)", () async {
+      var loc = await locApi.getLocation(id: 999696);
+      Logger().d(loc);
+    });
+    test("get location", () async {
+      var loc = await locApi.getLocation(id: 1);
+      Logger().d(loc);
+    });
+    test("get locations (page)", () async {
+      var loc = await locApi.getMassiveLocations();
+      Logger().d(loc);
+    });
+
+    test("get locations (error)", () async {
+      var loc = await locApi.getMassiveLocations(page: 79797979);
+      Logger().d(loc);
+    });
+    test("get multiple locations ", () async {
+      var loc = await locApi.getMultipleLocation(id: [1, 5, 9]);
+      Logger().d(loc);
+    });
+
+    test("get filtered location", () async {
+      var loc = await locApi.getFilteredLocations(episode: "1");
+      Logger().d(loc);
     });
   });
 }
