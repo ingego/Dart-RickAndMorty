@@ -1,5 +1,5 @@
-import 'package:rick_and_morty_api/src/data/character.dart';
-import 'package:rick_and_morty_api/src/rick_and_morty_api_base.dart';
+import 'package:rickAndMorty_api/src/data/character.dart';
+import 'package:rickAndMorty_api/src/rick_and_morty_api_base.dart';
 
 class CharacterManager extends ApiManager {
   Future<List<Character>> getMassiveCharacters({int page = 1}) async {

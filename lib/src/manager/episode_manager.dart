@@ -1,5 +1,5 @@
-import 'package:rick_and_morty_api/src/data/episode.dart';
-import 'package:rick_and_morty_api/src/rick_and_morty_api_base.dart';
+import 'package:rickAndMorty_api/src/data/episode.dart';
+import 'package:rickAndMorty_api/src/rick_and_morty_api_base.dart';
 
 class EpisodeManager extends ApiManager {
   Future<List<Episode>> getMassiveEpisodes({int page = 1}) async {
