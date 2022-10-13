@@ -1,6 +1,6 @@
 import 'package:logger/logger.dart';
-import 'package:rickAndMorty_api/src/manager/character_manager.dart';
-import 'package:rickAndMorty_api/src/manager/location_manager.dart';
+import 'package:alt_rick_and_morty/src/manager/character_manager.dart';
+import 'package:alt_rick_and_morty/src/manager/location_manager.dart';
 import 'package:test/test.dart';
 
 void main() {

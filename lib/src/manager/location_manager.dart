@@ -1,5 +1,5 @@
-import 'package:rickAndMorty_api/src/data/location.dart';
-import 'package:rickAndMorty_api/src/rick_and_morty_api_base.dart';
+import 'package:alt_rick_and_morty/src/data/location.dart';
+import 'package:alt_rick_and_morty/src/rick_and_morty_api_base.dart';
 
 class LocationManager extends ApiManager {
   Future<List<Location>> getMassiveLocations({int page = 1}) async {
